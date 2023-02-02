@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
+import fleetsModule from './fleets'
 import loginModule from './login'
+import userModule from './user'
 
 export default createStore({
   state: {
@@ -11,6 +13,8 @@ export default createStore({
   actions: {
   },
   modules: {
-    login: loginModule
+    login: loginModule,
+    fleets: fleetsModule,
+    user: userModule
   }
 })

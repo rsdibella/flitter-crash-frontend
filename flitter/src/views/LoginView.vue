@@ -15,7 +15,7 @@
         </div> 
         <br />
         <div id="lower">
-            <input type="submit" value="Login" @click="showCredentials">  
+            <input type="submit" value="Login">  
         </div>
       </form>
     </div>
@@ -41,13 +41,10 @@
       password: null
     })
 
-    const showCredentials = () => console.log(credentials)
-
     return {
       email,
       password,
       credentials,
-      showCredentials
     }       
   }
 });
