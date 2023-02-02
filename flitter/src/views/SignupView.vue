@@ -1,18 +1,26 @@
 <template>
-  <div class="login-wraper">
-    <div class="login-form">
-      <h1>Inicio de sesión</h1>
+  <div class="signup-wraper">
+    <div class="signup-form">
+      <h1>Sign up</h1>
       <form>
+        <div>
+          <input type="name" placeholder="Name" v-model="credentials.name" required>
+        </div>
+        <br />
         <div>
           <input type="email" placeholder="Email" v-model="credentials.email" required>
         </div>
         <br />
         <div>
           <input type="password" placeholder="Password" v-model="credentials.password" required>
+        </div>
+        <br />
+        <div>
+          <input type="confirm password" placeholder="Confirm password" v-model="credentials.confirmPassword" required>
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Login" @click="showCredentials">  
+            <input class="button" type="submit" value="Signup" @click="showPasswordRequirements">  
         </div>
       </form>
     </div>
@@ -24,28 +32,38 @@
   import { defineComponent, ref } from 'vue';
   
   export default defineComponent({
-    name: 'loginView',
+    name: 'signupView',
     components: {
       
     },
   
   setup() {
-
+    const name = ref(null)
     const email = ref(null)
     const password = ref(null)
+    const confirmPassword = ref(null)
 
     const credentials = ref({
+      name: null,
       email: null,
       password: null
     })
 
     const showCredentials = () => console.log(credentials)
 
+    const showPasswordRequirements = () => {
+    const message = "Both the username and password must be composed of letters between a-z or A-Z. It must not contain numbers, special characters, or the _ character.";
+    alert(message);
+};
+
     return {
+      name,
       email,
       password,
+      confirmPassword,
       credentials,
-      showCredentials
+      showCredentials,
+      showPasswordRequirements
     }       
   }
 });
@@ -55,17 +73,17 @@
 
 <style scoped>
 
-.login-wraper {
+.signup-wraper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh
 }
-.login-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  max-width: 300px;
+  width: 30vw;
   align-items: center;
   padding: 20px 40px;
   background-color: rgb(255, 255, 255);
@@ -75,6 +93,7 @@
 }
 
 input {
+  width: 200px;
   padding: 5px 5px;
   border-style: none;
   border: solid 0.8px #2c3e50;
@@ -82,13 +101,13 @@ input {
   color: #00172d;
 }
 
-.login-form .button {
+.signup-form .button {
   width: 100%;
   padding: 5px 5px;
   margin-top: 15px;
   margin-bottom: 20px;
   border-style: none;
-  border: solid 1px #00172d;
+  border: solid 1.5px #00172d;
   border-radius: 5px;
   background-color: unset;
   font-weight: bolder;

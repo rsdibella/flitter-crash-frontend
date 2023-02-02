@@ -7,24 +7,32 @@
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1a3550;
+  background-image: linear-gradient(10deg, #f6ff00, #ff9d00, #fba1ba, #d1f1ccbc, #a0ebdbcc, #6ad6b2bb, #96c990e1, #e6fca9);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 nav {
+  position: fixed;
+  top: 0;
   padding: 30px;
+  width: 100%
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #1a3550;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ffffff;
 }
 </style>
