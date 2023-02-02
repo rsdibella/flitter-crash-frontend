@@ -39,13 +39,10 @@
       password: null
     })
 
-    const showCredentials = () => console.log(credentials)
-
     return {
       email,
       password,
       credentials,
-      showCredentials
     }       
   }
 });
