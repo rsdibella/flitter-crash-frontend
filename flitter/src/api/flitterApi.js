@@ -1,7 +1,7 @@
-/* import axios from "axios";
+import axios from "axios";
 
 const flitterApi = axios.create({
-  baseURL: "https://api.escuelajs.co/api/v1",  Aquí metemos la base url de nuestra api
+  baseURL: "http://localhost:3001"
 });
 
-export default flitterApi; */
+export default flitterApi;
