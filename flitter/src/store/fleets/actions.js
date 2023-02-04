@@ -6,15 +6,15 @@ const actions = {
     
     commit("setIsLoading", true);
 
-    /* const { data } = await flitterApi.get<unknown, AxiosResponse<Product[]>>(
-      "/products"
-    ); */
+    const { data } = await flitterApi.get("/feed/flits");
 
-    const { data } = await flitterApi.get("/feed/fleets");
+    console.log("Hace la petición")
 
     commit("setIsLoading", false);
 
     commit("setFleets", data);
+
+    console.log("Establece los flits")
   },
  
 };

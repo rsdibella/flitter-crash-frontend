@@ -22,6 +22,8 @@ const actions = {
   }, */
   async signUp({ commit }, userInfo) {
 
+    console.log("Se llama a la función")
+
     const { data } = await flitterApi.post("/signup", userInfo)
 
     console.log("Se ha hecho la petición con", userInfo)

@@ -1,18 +1,31 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
   </div>
+
+  <button @click="fetchFleets()">Pedir flits</button>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
+import useFleets from '@/composables/useFleets';
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    
+  },
+  setup() {
+
+    const {fetchFleets} = useFleets()
+
+    
+
+
+    return {
+        fetchFleets
+    }       
   }
 }
 </script>

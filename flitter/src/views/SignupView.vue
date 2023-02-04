@@ -24,7 +24,7 @@
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Signup" @click="showUserInfo(userInfo)">  
+            <input class="button" type="submit" value="Signup" @click="signUp(userInfo)">  
         </div>
       </form>
     </div>
@@ -63,11 +63,9 @@
 
     const { signUp } = useUser()
 
-    signUp(userInfo) //Hay que llamar a esta función cuando se pulse en Sign Up.
-
-    function showUserInfo (userInfo) {
+/*     function showUserInfo (userInfo) {
       console.log(userInfo)
-    }
+    } */
 
     return {
       name,
@@ -77,7 +75,7 @@
       alias,
       userInfo,
       showPasswordRequirements,
-      showUserInfo
+      signUp
     }       
   }
 });
