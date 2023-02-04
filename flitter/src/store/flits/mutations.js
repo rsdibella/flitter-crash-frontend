@@ -1,7 +1,7 @@
 
 const mutations = {
-  setFleets(state, fleets) {
-    state.fleets = fleets;
+  setFlits(state, flits) {
+    state.flits = flits;
   },
   setIsLoading(state, value) {
     state.isLoading = value;

@@ -3,7 +3,7 @@ import getters from "./getters";
 import mutations from "./mutations";
 import actions from "./actions";
 
-const fleetsModule = {
+const flitsModule = {
     namespaced: true,
     state,
     getters,
@@ -11,4 +11,4 @@ const fleetsModule = {
     actions
 }
 
-export default fleetsModule
+export default flitsModule

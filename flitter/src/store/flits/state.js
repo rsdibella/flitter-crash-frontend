@@ -1,6 +1,6 @@
 function state() {
     return {
-      fleets: [],
+      flits: [],
       isLoading: false,
     };
   }

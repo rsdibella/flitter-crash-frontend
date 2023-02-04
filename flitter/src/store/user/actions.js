@@ -2,24 +2,18 @@ import flitterApi from "@/api/flitterApi";
 
 
 const actions = {
-  /* async getUserInfo({ commit }) {
-    
-    commit("setIsLoading", true);
+  async fetchUsers({ commit }) {
 
-    const token = localStorage.getItem('token')
+    console.log("Se llama a la función")
 
-    const { data, status } = await flitterApi.get<string, AxiosResponse<User>>("/auth/profile", 
-        {
-            headers: {
-                Authorization: `Bearer ${token}`
-            }
-        });
+    const { data } = await flitterApi.get("/users")
 
+    console.log("Se ha hecho la petición" )
 
-    commit("setIsLoading", false);
+    commit("setUsers", data);
 
-    commit("setUser", data);
-  }, */
+    console.log("Se han establecido los users en el state")
+  },
   async signUp({ commit }, userInfo) {
 
     console.log("Se llama a la función")

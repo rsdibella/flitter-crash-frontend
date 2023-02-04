@@ -1,6 +1,6 @@
 const getters = {
-    getFleets(state) {
-      return state.fleets;
+    getFlits(state) {
+      return state.flits;
     },
     setIsLoading(state) {
       return state.isLoading;

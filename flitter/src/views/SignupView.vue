@@ -34,7 +34,7 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
-  import useUser from '@/composables/useUser';
+  import useUsers from '@/composables/useUsers';
   
   export default defineComponent({
     name: 'signUpView',
@@ -61,7 +61,7 @@
       alert(message);
     };
 
-    const { signUp } = useUser()
+    const { signUp } = useUsers()
 
 /*     function showUserInfo (userInfo) {
       console.log(userInfo)

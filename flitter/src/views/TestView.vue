@@ -1,36 +1,60 @@
 <template>
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
     
-    <button class="btn btn-primary" @click="showButton()">Prueba</button>
+  </div>
+  <div>
+    <button @click="fetchFlits()">Pedir flits</button>
+  </div>
+  <form>
+      <div>
+        <input type="number" placeholder="User id" v-model="flitInfo.id_user" required>
+      </div>
+      <br />
+      <div>
+        <input type="text" placeholder="Mensaje" v-model="flitInfo.message" required>
+      </div>
+      <div id="lower">
+          <input class="button" type="submit" value="Crear flit" @click="createNewFlit(flitInfo)">  
+      </div>
+    </form>
 
+
+    
 </template>
 
 <script>
 
-  import { defineComponent } from 'vue';
-  /* import useFleets from '@/composables/useFleets'; */
-  
-  export default defineComponent({
-    name: 'testView',
-    components: {
-      
-    },
-  
+import useFlits from '@/composables/useFlits';
+import {  ref } from 'vue';
+export default {
+  name: 'testView',
+  components: {
+    
+  },
   setup() {
 
-    /* const {fetchFleets} = useFleets()
+    const flitInfo = ref({
+      id_user: null,
+      message: null
+    })
 
-    fetchFleets() */
-
-    function showButton() {
-        console.log("Botón pulsado")
-    }
-
+    const {fetchFlits, createNewFlit} = useFlits()
 
     return {
-        showButton
+        fetchFlits,
+        createNewFlit,
+        flitInfo
     }       
   }
-});
-
-  
+}
 </script>
+
+<style scoped>
+
+.create-flit {
+  display: flex;
+  flex-direction: column;
+}
+
+</style>
