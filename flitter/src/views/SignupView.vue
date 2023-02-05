@@ -16,7 +16,7 @@
         </div>
         <br />
         <div>
-          <input type="confirm password" placeholder="Confirm password" v-model="userInfo.confirmPassword" required>
+          <input type="confirm password" placeholder="Confirm password" v-model="confirmPassword" required>
         </div> 
         <br />
         <div id="lower">
@@ -39,12 +39,9 @@
     },
   
   setup() {
-    const name = ref(null)
-    const email = ref(null)
-    const password = ref(null)
+    
     const confirmPassword = ref(null)
-    const alias = ref(null)
-
+    
     const userInfo = ref({
       name: null,
       email: null,
@@ -63,11 +60,7 @@
     } */
 
     return {
-      name,
-      email,
-      password,
       confirmPassword,
-      alias,
       userInfo,
       showPasswordRequirements,
       signUp
