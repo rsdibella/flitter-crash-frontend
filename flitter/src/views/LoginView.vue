@@ -68,7 +68,6 @@
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 input {
@@ -86,11 +85,12 @@ input {
   margin-bottom: 20px;
   border-style: none;
   border: solid 1px #00172d;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: unset;
   font-size: 16px;
   font-weight: bolder;
   color: #00172d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 </style>

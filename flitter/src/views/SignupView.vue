@@ -83,17 +83,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 30vw;
+  max-width: 300px;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgb(255, 255, 255);
+  border: 3px solid #2c3e50;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 input {
-  width: 200px;
   padding: 5px 5px;
   border-style: none;
   border: solid 0.8px #2c3e50;
@@ -108,11 +106,12 @@ input {
   margin-bottom: 20px;
   border-style: none;
   border: solid 1.5px #00172d;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: unset;
   font-size: 18px;
   font-weight: bolder;
   color: #00172d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 </style>
