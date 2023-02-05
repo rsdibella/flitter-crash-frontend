@@ -3,7 +3,7 @@ import getters from "./getters";
 import mutations from "./mutations";
 import actions from "./actions";
 
-const userModule = {
+const flitsModule = {
     namespaced: true,
     state,
     getters,
@@ -11,4 +11,4 @@ const userModule = {
     actions
 }
 
-export default userModule
+export default flitsModule

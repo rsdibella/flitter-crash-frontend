@@ -4,23 +4,23 @@
       <h1>Sign up</h1>
       <form>
         <div>
-          <input type="name" placeholder="Name" v-model="credentials.name" required>
+          <input type="name" placeholder="Name" v-model="userInfo.name" required>
         </div>
         <br />
         <div>
-          <input type="email" placeholder="Email" v-model="credentials.email" required>
+          <input type="email" placeholder="Email" v-model="userInfo.email" required>
         </div>
         <br />
         <div>
-          <input type="password" placeholder="Password" v-model="credentials.password" required>
+          <input type="password" placeholder="Password" v-model="userInfo.password" required>
         </div>
         <br />
         <div>
-          <input type="confirm password" placeholder="Confirm password" v-model="credentials.confirmPassword" required>
+          <input type="confirm password" placeholder="Confirm password" v-model="confirmPassword" required>
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Signup" @click="showPasswordRequirements">  
+            <input class="button" type="submit" value="Signup" @click="signUp(userInfo)">  
         </div>
       </form>
     </div>
@@ -30,40 +30,40 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+  import useUsers from '@/composables/useUsers';
   
   export default defineComponent({
-    name: 'signupView',
+    name: 'signUpView',
     components: {
       
     },
   
   setup() {
-    const name = ref(null)
-    const email = ref(null)
-    const password = ref(null)
+    
     const confirmPassword = ref(null)
-
-    const credentials = ref({
+    
+    const userInfo = ref({
       name: null,
       email: null,
-      password: null
+      password: null,
     })
 
-    const showCredentials = () => console.log(credentials)
-
     const showPasswordRequirements = () => {
-    const message = "Both the username and password must be composed of letters between a-z or A-Z. It must not contain numbers, special characters, or the _ character.";
-    alert(message);
-};
+      const message = "Both the username and password must be composed of letters between a-z or A-Z. It must not contain numbers, special characters, or the _ character.";
+      alert(message);
+    };
+
+    const { signUp } = useUsers()
+
+/*     function showUserInfo (userInfo) {
+      console.log(userInfo)
+    } */
 
     return {
-      name,
-      email,
-      password,
       confirmPassword,
-      credentials,
-      showCredentials,
-      showPasswordRequirements
+      userInfo,
+      showPasswordRequirements,
+      signUp
     }       
   }
 });

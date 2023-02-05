@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
-import fleetsModule from './fleets'
+import flitsModule from './flits'
 import loginModule from './login'
-import userModule from './user'
+import usersModule from './users'
 
 export default createStore({
   state: {
@@ -14,7 +14,7 @@ export default createStore({
   },
   modules: {
     login: loginModule,
-    fleets: fleetsModule,
-    user: userModule
+    flits: flitsModule,
+    users: usersModule
   }
 })
