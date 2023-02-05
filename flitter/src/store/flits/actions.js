@@ -13,19 +13,15 @@ const actions = {
 
   },
   async createNewFlit({ commit }, flitInfo) {
-    
-    console.log("Ha entrado")
 
     commit("setIsLoading", true);
 
 
     const { data } = await flitterApi.post("/feed/flits", flitInfo);
 
-    console.log("Hace el post")
 
     console.log(data)
 
-    console.log("Ha creado el flit")
 
     commit("setIsLoading", false);
   },

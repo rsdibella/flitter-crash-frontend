@@ -7,8 +7,8 @@ const useUsers = () => {
     return {
 
         //Actions
-        signUp: (userInfo) => store.dispatch("user/signUp", userInfo), 
-        fetchUsers: () => store.dispatch("user/fetchUsers"), 
+        signUp: (userInfo) => store.dispatch("users/signUp", userInfo), 
+        fetchUsers: () => store.dispatch("users/fetchUsers"), 
         
     }
 }

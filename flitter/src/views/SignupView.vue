@@ -19,10 +19,6 @@
           <input type="confirm password" placeholder="Confirm password" v-model="userInfo.confirmPassword" required>
         </div> 
         <br />
-        <div>
-          <input type="alias" placeholder="Alias" v-model="userInfo.alias" required>
-        </div> 
-        <br />
         <div id="lower">
             <input class="button" type="submit" value="Signup" @click="signUp(userInfo)">  
         </div>
@@ -53,7 +49,6 @@
       name: null,
       email: null,
       password: null,
-      alias: null
     })
 
     const showPasswordRequirements = () => {

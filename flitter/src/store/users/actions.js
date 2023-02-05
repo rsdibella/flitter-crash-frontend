@@ -14,11 +14,12 @@ const actions = {
 
     console.log("Se han establecido los users en el state")
   },
+
   async signUp({ commit }, userInfo) {
 
     console.log("Se llama a la función")
 
-    const { data } = await flitterApi.post("/signup", userInfo)
+    const { data } = await flitterApi.post("/user/signup", userInfo)
 
     console.log("Se ha hecho la petición con", userInfo)
 

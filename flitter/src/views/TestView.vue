@@ -1,11 +1,13 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    
-  </div>
+  
+  <br />
+  <br />
+  <br />
+  <br />
   <div>
     <button @click="fetchFlits()">Pedir flits</button>
   </div>
+  <br />
   <form>
       <div>
         <input type="number" placeholder="User id" v-model="flitInfo.id_user" required>
@@ -14,10 +16,15 @@
       <div>
         <input type="text" placeholder="Mensaje" v-model="flitInfo.message" required>
       </div>
+      <br />
       <div id="lower">
           <input class="button" type="submit" value="Crear flit" @click="createNewFlit(flitInfo)">  
       </div>
-    </form>
+  </form>
+  <br />
+  <div>
+    <button @click="fetchUsers()">Pedir usuarios</button>
+  </div>
 
 
     
@@ -26,7 +33,9 @@
 <script>
 
 import useFlits from '@/composables/useFlits';
+import useUsers from '@/composables/useUsers';
 import {  ref } from 'vue';
+
 export default {
   name: 'testView',
   components: {
@@ -40,11 +49,13 @@ export default {
     })
 
     const {fetchFlits, createNewFlit} = useFlits()
+    const {fetchUsers} = useUsers()
 
     return {
         fetchFlits,
         createNewFlit,
-        flitInfo
+        flitInfo,
+        fetchUsers
     }       
   }
 }
