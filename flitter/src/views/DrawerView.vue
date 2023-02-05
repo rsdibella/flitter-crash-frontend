@@ -40,3 +40,7 @@ export default {
   }),
 };
 </script>
+
+<styles>
+  
+</styles>
