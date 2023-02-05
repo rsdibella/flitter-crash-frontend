@@ -110,6 +110,7 @@ input {
   border: solid 1.5px #00172d;
   border-radius: 5px;
   background-color: unset;
+  font-size: 18px;
   font-weight: bolder;
   color: #00172d;
 }

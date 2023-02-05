@@ -1,8 +1,4 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
@@ -21,6 +17,7 @@
 }
 
 nav {
+  border: dashed 1px red;
   position: fixed;
   top: 0;
   padding: 30px;
@@ -28,6 +25,7 @@ nav {
 }
 
 nav a {
+  border: dashed 1px red;
   font-weight: bold;
   color: #1a3550;
 }

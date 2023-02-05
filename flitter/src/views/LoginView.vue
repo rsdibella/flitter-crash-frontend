@@ -1,7 +1,7 @@
 <template>
   <div class="login-wraper">
     <div class="login-form">
-      <h1>Inicio de sesión</h1>
+      <h1>Login</h1>
       <form>
         <div>
           <input type="email" placeholder="Email" v-model="credentials.email" required>
@@ -88,6 +88,7 @@ input {
   border: solid 1px #00172d;
   border-radius: 5px;
   background-color: unset;
+  font-size: 16px;
   font-weight: bolder;
   color: #00172d;
 }
