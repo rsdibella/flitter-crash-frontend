@@ -4,6 +4,9 @@ const mutations = {
     },
     setIsLoading(state, value) {
       state.isLoading = value;
+    },
+    setSelectedFlit(state, selectedFlit) {
+      state.selectedFlit = selectedFlit
     }
   };
   

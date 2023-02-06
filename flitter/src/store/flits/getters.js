@@ -2,8 +2,11 @@ const getters = {
     getFlits(state) {
       return state.flits;
     },
-    setIsLoading(state) {
+    getIsLoading(state) {
       return state.isLoading;
+    },
+    getSelectedFlit(state) {
+      return state.selectedFlit
     }
   };
   

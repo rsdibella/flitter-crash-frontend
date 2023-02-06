@@ -3,11 +3,11 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'HomeView',
-  //   component: () => import(/* webpackChunkName: "signupView" */ '../views/HomeView.vue')
-  // },
+  {
+    path: '/',
+    name: 'HomeView',
+    component: () => import(/* webpackChunkName: "signupView" */ '../views/HomeView.vue')
+  },
   {
     path: '/signup',
     name: 'signupView',
@@ -23,6 +23,21 @@ const routes = [
     path: '/test',
     name: 'testView',
     component: () => import(/* webpackChunkName: "testView" */ '../views/TestView.vue')
+  },
+  {
+    path: '/flits',
+    name: 'flitsView',
+    component: () => import(/* webpackChunkName: "flitsView" */ '../views/FlitsView.vue')
+  },
+  {
+    path: "/flit-details/:id",
+    name: "flitDetailView",
+    component: () =>
+      import("../views/FlitDetailView.vue"),
+    props: (route) => {
+      const id = Number(route.params.id);
+      return isNaN(id) ? { id: null } : { id };
+    },
   },
 
 ]
