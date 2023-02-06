@@ -37,12 +37,10 @@
   
         setup() {
             
-            const { isLoading, fetchFlits} = useFlits()
+            const {flits, isLoading, fetchFlits} = useFlits()
   
           fetchFlits()
-
-          const  {flits} = useFlits
-
+          
         return {
           isLoading,
           flits
