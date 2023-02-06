@@ -35,8 +35,8 @@ const routes = [
     component: () =>
       import("../views/FlitDetailView.vue"),
     props: (route) => {
-      const id = Number(route.params.id);
-      return isNaN(id) ? { id: null } : { id };
+      console.log(route.params.id);
+      return "63e00fd1eb8e83e87837ac39"
     },
   },
 

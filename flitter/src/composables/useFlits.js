@@ -12,7 +12,7 @@ const useFlits = () => {
         //Actions
         fetchFlits: () => store.dispatch("flits/fetchFlits"), 
         createNewFlit: (flitInfo) => store.dispatch("flits/createNewFlit", flitInfo),
-        selectedFlit: () => store.dispatch("flits/fetchSelectedFlit")
+        fetchSelectedFlit: () => store.dispatch("flits/fetchSelectedFlit")
         
     }
 }

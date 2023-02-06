@@ -32,11 +32,9 @@
       },
   
       setup(props) {
-          const { isLoading, fetchSelectedFlit} = useFlits()
+          const { selectedFlit, isLoading, fetchSelectedFlit} = useFlits()
   
           fetchSelectedFlit(props.id)
-
-          const {selectedFlit} = useFlits()
   
   
         return {selectedFlit, isLoading}

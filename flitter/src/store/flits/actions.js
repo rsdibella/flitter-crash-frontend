@@ -34,8 +34,6 @@ const actions = {
 
   async fetchSelectedFlit({ commit }) {
 
-    console.log("Entra en la función")
-
     commit("setIsLoading", true);
 
     const { data } = await flitterApi.get("/feed/flits/:flitId");
