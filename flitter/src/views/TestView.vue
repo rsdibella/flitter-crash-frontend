@@ -10,7 +10,7 @@
   <br />
   <form>
       <div>
-        <input type="number" placeholder="User id" v-model="flitInfo.id_user" required>
+        <input type="text" placeholder="User id" v-model="flitInfo.id_user" required>
       </div>
       <br />
       <div>
