@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="title">
       <h1>Flits</h1>
     </div>
     <div>
@@ -39,12 +39,21 @@
   
   <style scoped>
   
+  .title {
+    padding: 20px;
+  }
   .product-list {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     gap: 1rem 1rem;
     margin-left: 10px;
+  }
+
+  .flit-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   
   </style>
