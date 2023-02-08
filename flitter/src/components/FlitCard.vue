@@ -35,6 +35,9 @@
     
     <style scoped>
 
+    * {
+      border: dashed 1px red
+    }
 
     .flit-card {
       width: 300px;
@@ -63,7 +66,6 @@
       align-items: center;
       justify-content: space-evenly;
       color: black;
-      padding-bottom: 10px;
     }
 
     .flit-author {
@@ -88,9 +90,11 @@
     }
 
     .flit-date {
-      align-items: flex-end;
+      width: 100%;
     }
     .flit-date > p {
       font-size: 12px;
+      padding-top: 5px;
+      text-align: end;
     }
   </style>
