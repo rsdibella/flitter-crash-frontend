@@ -11,6 +11,7 @@
   </template>
   
     
+<<<<<<< HEAD
     <script>
       import { defineComponent } from 'vue';
       import useFlits from '@/composables/useFlits';
@@ -26,19 +27,35 @@
         setup() {
             
             const {flits, isLoading, fetchFlits} = useFlits()
+=======
+<script>
+  import { defineComponent } from 'vue';
+  import useFlits from '@/composables/useFlits';
+  import FlitCard from '@/components/FlitCard.vue';
+>>>>>>> 18589ae363a42d551fc5f0ce8a152ff92ca25bd1
   
-          fetchFlits()
-          
-        return {
-          isLoading,
-          flits
-        }
-      }
+  export default defineComponent({
+    name: 'flitsView',
+    components: {
+      FlitCard
+    },
+
+    setup() {
+        
+      const {flits, isLoading, fetchFlits} = useFlits()
+
+      fetchFlits()
+      
+    return {
+      isLoading,
+      flits
+    }
+  }
+
+});
+</script>
   
-    });
-    </script>
-  
-  <style scoped>
+<style scoped>
   
   .title {
     padding: 20px;

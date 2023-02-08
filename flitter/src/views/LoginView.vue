@@ -12,7 +12,7 @@
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Login" @click="showCredentials">  
+            <input class="button" type="submit" value="Login" @click="login()">  
         </div>
       </form>
       <GoBack />
@@ -23,7 +23,6 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
-  import GoBack from '@/components/GoBack';
   
   export default defineComponent({
     name: 'loginView',
@@ -41,10 +40,15 @@
       password: null
     })
 
+    function login() {
+      router.push({name: "flitsView"})
+    }
+
     return {
       email,
       password,
       credentials,
+      login
     }       
   }
 });
