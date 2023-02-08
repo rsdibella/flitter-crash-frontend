@@ -84,7 +84,7 @@
       text-align: left;
       background-color: rgb(233, 236, 215);
       padding: 20px;
-      width: 95%;
+      width: 100%;
       border: 0.5px solid rgb(171, 175, 143);
       border-radius: 6px;
     }

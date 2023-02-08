@@ -16,6 +16,7 @@ box-sizing: border-box;
 html, body {
     margin: 0;
     height: 100%;
+    
     background-image: linear-gradient(10deg, #f6ff00, #ff9d00, #fba1ba, #d1f1ccbc, #a0ebdbcc, #6ad6b2bb, #96c990e1, #e6fca9);
     background-size: cover;
     overflow-y: scroll;
@@ -23,6 +24,9 @@ html, body {
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
