@@ -2,7 +2,7 @@
     <div class="title">
       <h1>Flits</h1>
     </div>
-    <div>
+    <div class="flitList-main-wraper">
       <div v-if="isLoading">Cargando...</div>
       <div class="flits-list" v-else>
         <FlitCard v-for="flit in flits" :key="flit._id" :flit="flit"/>
@@ -50,9 +50,8 @@
     margin-left: 10px;
   }
 
-  .flit-list {
+  .flitList-main-wraper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
   }
   
