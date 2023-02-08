@@ -12,7 +12,7 @@
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Login" @click="showCredentials">  
+            <input class="button" type="submit" value="Login" @click="login()">  
         </div>
       </form>
     </div>
@@ -22,6 +22,7 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+  import router from '@/router';
   
   export default defineComponent({
     name: 'loginView',
@@ -39,10 +40,15 @@
       password: null
     })
 
+    function login() {
+      router.push({name: "flitsView"})
+    }
+
     return {
       email,
       password,
       credentials,
+      login
     }       
   }
 });
