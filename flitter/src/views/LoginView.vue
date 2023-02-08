@@ -15,6 +15,7 @@
             <input class="button" type="submit" value="Login" @click="showCredentials">  
         </div>
       </form>
+      <GoBack />
     </div>
   </div>
  </template>
@@ -22,11 +23,12 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+  import GoBack from '@/components/GoBack';
   
   export default defineComponent({
     name: 'loginView',
     components: {
-      
+      GoBack
     },
   
   setup() {

@@ -15,11 +15,12 @@
       import { defineComponent } from 'vue';
       import useFlits from '@/composables/useFlits';
       import FlitCard from '@/components/FlitCard.vue';
+  
       
       export default defineComponent({
         name: 'flitsView',
         components: {
-          FlitCard
+          FlitCard,
         },
   
         setup() {
