@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <h1>Flits</h1>
-  </div>
-  <div>
-    <div v-if="isLoading">Cargando...</div>
-    <div class="flits-list" v-else>
-      <FlitCard v-for="flit in flits" :key="flit._id" :flit="flit"/>
+    <div class="title">
+      <h1>Flits</h1>
     </div>
-  </div>
-</template>
+    <div>
+      <div v-if="isLoading">Cargando...</div>
+      <div class="flits-list" v-else>
+        <FlitCard v-for="flit in flits" :key="flit._id" :flit="flit"/>
+      </div>
+    </div>
+  </template>
   
     
 <script>
@@ -39,6 +39,9 @@
   
 <style scoped>
   
+  .title {
+    padding: 20px;
+  }
   .product-list {
     display: flex;
     flex-flow: row wrap;
@@ -47,4 +50,10 @@
     margin-left: 10px;
   }
 
-</style>
+  .flit-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  </style>
