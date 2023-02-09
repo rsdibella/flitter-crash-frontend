@@ -2,11 +2,17 @@ const getters = {
     getUsers(state) {
         return state.users
     },
-    getUser(state) {
-        return state.user
+    getSelfUser(state) {
+        return state.selfUser
     },
     getIsLoading(state) {
         return state.isLoading
+    },
+    getSelectedUser(state) {
+        return state.selectedUser
+    },
+    getToken(state) {
+        return state.token
     }
 }
 

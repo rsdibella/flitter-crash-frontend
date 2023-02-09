@@ -20,10 +20,15 @@
       <div id="lower">
           <input class="button" type="submit" value="Crear flit" @click="createNewFlit(flitInfo)">  
       </div>
+      
   </form>
   <br />
   <div>
     <button @click="fetchUsers()">Pedir usuarios</button>
+  </div>
+  <br />
+  <div>
+    <button @click="goProfile()">Ir al perfil</button>
   </div>
 
 
@@ -34,6 +39,7 @@
 
 import useFlits from '@/composables/useFlits';
 import useUsers from '@/composables/useUsers';
+import router from '@/router';
 import {  ref } from 'vue';
 
 export default {
@@ -51,11 +57,16 @@ export default {
     const {fetchFlits, createNewFlit} = useFlits()
     const {fetchUsers} = useUsers()
 
+    function goProfile() {
+      router.push({name: "profileView"})
+    }
+
     return {
         fetchFlits,
         createNewFlit,
         flitInfo,
-        fetchUsers
+        fetchUsers,
+        goProfile
     }       
   }
 }

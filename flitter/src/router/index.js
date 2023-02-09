@@ -32,12 +32,25 @@ const routes = [
   {
     path: "/flit-details/:id",
     name: "flitDetailView",
-    component: () =>
-      import("../views/FlitDetailView.vue"),
+    component: () => import("../views/FlitDetailView.vue"),
     props: (route) => {
-      console.log(route.params.id);
-      return "63e00fd1eb8e83e87837ac39"
+      const id = (route.params.id);
+      return id
     },
+  },
+  {
+    path: "/user-profile/:id",
+    name: "selectedUserView",
+    component: () => import("../views/SelectedUserView.vue"),
+    props: (route) => {
+      const id = (route.params.id);
+      return id;
+    },
+  },
+  {
+    path: '/profile',
+    name: 'profileView',
+    component: () => import(/* webpackChunkName: "profileView" */ '../views/ProfileView.vue')
   },
 
 ]
