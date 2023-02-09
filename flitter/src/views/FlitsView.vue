@@ -27,6 +27,7 @@
         setup() {
             
             const {flits, isLoading, fetchFlits} = useFlits()
+            
 =======
 <script>
   import { defineComponent } from 'vue';
