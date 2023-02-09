@@ -11,10 +11,28 @@
   </template>
   
     
+<<<<<<< HEAD
+    <script>
+      import { defineComponent } from 'vue';
+      import useFlits from '@/composables/useFlits';
+      import FlitCard from '@/components/FlitCard.vue';
+  
+      
+      export default defineComponent({
+        name: 'flitsView',
+        components: {
+          FlitCard,
+        },
+  
+        setup() {
+            
+            const {flits, isLoading, fetchFlits} = useFlits()
+=======
 <script>
   import { defineComponent } from 'vue';
   import useFlits from '@/composables/useFlits';
   import FlitCard from '@/components/FlitCard.vue';
+>>>>>>> 18589ae363a42d551fc5f0ce8a152ff92ca25bd1
   import router from '@/router';
   
   export default defineComponent({

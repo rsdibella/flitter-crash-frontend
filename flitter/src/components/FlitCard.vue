@@ -36,10 +36,6 @@
     
     <style scoped>
 
-    * {
-      border: dashed 1px red
-    }
-
     .flit-card {
       width: 300px;
       padding: 20px;
@@ -48,7 +44,7 @@
       justify-content: center;
       background-color: white;
       border: 0.5px solid black;
-      border-radius: 4px;
+      border-radius: 6px;
       margin: 10px;
     }
 

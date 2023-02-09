@@ -15,6 +15,7 @@
             <input class="button" type="submit" value="Login" @click="login(credentials)">  
         </div>
       </form>
+      <GoBack />
     </div>
   </div>
  </template>
@@ -22,12 +23,15 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+<<<<<<< HEAD
   import useLogin from '@/composables/useLogin';
+=======
+>>>>>>> 24cd0abb3905d3eee53c4acc908923d4e58f1cce
   
   export default defineComponent({
     name: 'loginView',
     components: {
-      
+      GoBack
     },
   
   setup() {
