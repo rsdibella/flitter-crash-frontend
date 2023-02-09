@@ -11,8 +11,8 @@ const useLogin = () => {
         //Mutations
         logout: (value) => store.commit("login/deleteToken", value),
 
-        /* //Actions
-        login: (credentials) => store.dispatch("login/login", credentials) */
+        //Actions
+        login: (credentials) => store.dispatch("login/login", credentials)
         
     }
 }

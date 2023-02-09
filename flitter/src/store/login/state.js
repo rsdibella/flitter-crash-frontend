@@ -1,7 +1,7 @@
 
 function state() {
     return {
-      token: null
+      token: null,
     };
   }
 

@@ -1,17 +1,16 @@
-import fakeShopApi from "@/api/fakeShopApi";
+import flitterApi from "@/api/flitterApi";
 import router from "@/router";
 
 const actions = {
   async login({commit}, credentials) {
 
+    const {data}  = await flitterApi.post("/users/login", credentials);
 
-    const {data, status}  = await fakeShopApi.post("/auth/login", credentials);
-
-    commit("setToken", data.access_token);
+    commit("setToken", data.token);
     
-    localStorage.setItem("token", data.access_token)
+    localStorage.setItem("token", data.token)
 
-    router.push({name: "productsListView"})
+    router.push({name: "flitsView"})
   },
   
 };

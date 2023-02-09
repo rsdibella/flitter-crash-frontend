@@ -5,7 +5,7 @@ const mutations = {
 
   deleteToken(state) {
     state.token = null
-  }
+  },
 };
 
 export default mutations;
