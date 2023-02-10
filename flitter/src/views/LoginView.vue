@@ -23,10 +23,8 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
-<<<<<<< HEAD
   import useLogin from '@/composables/useLogin';
-=======
->>>>>>> 24cd0abb3905d3eee53c4acc908923d4e58f1cce
+  import GoBack from '@/components/GoBack.vue';
   
   export default defineComponent({
     name: 'loginView',

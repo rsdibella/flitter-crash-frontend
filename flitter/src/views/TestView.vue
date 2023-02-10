@@ -22,18 +22,12 @@
   <div>
     <button @click="fetchUsers()">Pedir usuarios</button>
   </div>
-<<<<<<< HEAD
   <br />
   <div>
     <button @click="goProfile()">Ir al perfil</button>
   </div>
-
-
-    
-=======
   </div>
   <GoBack />
->>>>>>> 24cd0abb3905d3eee53c4acc908923d4e58f1cce
 </template>
 
 <script>
