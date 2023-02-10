@@ -15,10 +15,7 @@
 <script>
 
     import { defineComponent } from 'vue';
-    import useFlits from '@/composables/useFlits';
-
-   
-    
+    import useFlits from '@/composables/useFlits';    
     export default defineComponent({
       name: 'flitDetailView',
       components: {
