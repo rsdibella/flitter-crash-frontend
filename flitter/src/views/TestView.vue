@@ -16,19 +16,31 @@
       <div id="lower">
           <input class="button" type="submit" value="Crear flit" @click="createNewFlit(flitInfo)">  
       </div>
+      
   </form>
 
   <div>
     <button @click="fetchUsers()">Pedir usuarios</button>
   </div>
+<<<<<<< HEAD
+  <br />
+  <div>
+    <button @click="goProfile()">Ir al perfil</button>
+  </div>
+
+
+    
+=======
   </div>
   <GoBack />
+>>>>>>> 24cd0abb3905d3eee53c4acc908923d4e58f1cce
 </template>
 
 <script>
 
 import useFlits from '@/composables/useFlits';
 import useUsers from '@/composables/useUsers';
+import router from '@/router';
 import {  ref } from 'vue';
 import GoBack from '@/components/GoBack';
 
@@ -47,11 +59,16 @@ export default {
     const {fetchFlits, createNewFlit} = useFlits()
     const {fetchUsers} = useUsers()
 
+    function goProfile() {
+      router.push({name: "profileView"})
+    }
+
     return {
         fetchFlits,
         createNewFlit,
         flitInfo,
-        fetchUsers
+        fetchUsers,
+        goProfile
     }       
   }
 }

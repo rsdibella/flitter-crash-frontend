@@ -12,7 +12,7 @@
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Login" @click="login()">  
+            <input class="button" type="submit" value="Login" @click="login(credentials)">  
         </div>
       </form>
       <GoBack />
@@ -23,6 +23,10 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+<<<<<<< HEAD
+  import useLogin from '@/composables/useLogin';
+=======
+>>>>>>> 24cd0abb3905d3eee53c4acc908923d4e58f1cce
   
   export default defineComponent({
     name: 'loginView',
@@ -32,21 +36,14 @@
   
   setup() {
 
-    const email = ref(null)
-    const password = ref(null)
+    const {login} = useLogin()
 
     const credentials = ref({
       email: null,
       password: null
     })
 
-    function login() {
-      router.push({name: "flitsView"})
-    }
-
     return {
-      email,
-      password,
       credentials,
       login
     }       

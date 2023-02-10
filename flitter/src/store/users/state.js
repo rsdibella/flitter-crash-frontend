@@ -1,8 +1,10 @@
 function state() {
     return {
       users: [],
-      user: null,
-      isLoading: false
+      selfUser: null,
+      isLoading: false,
+      selectedUser: {},
+      token: null
     };
   }
 

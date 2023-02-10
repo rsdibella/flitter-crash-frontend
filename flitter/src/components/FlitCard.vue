@@ -3,6 +3,7 @@
     <div class="flit-author">
         <img src="../assets/flitterLogo2-removebg-preview.png">
         <h3>{{ flit.id_user.name }}</h3>
+        <button class="astext" @click="$emit('goUserProfile', flit)">Ir al perfil</button>
       </div>
 
     <div class="flit-info">
@@ -93,4 +94,12 @@
       padding-top: 5px;
       text-align: end;
     }
+
+    .astext {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
   </style>
