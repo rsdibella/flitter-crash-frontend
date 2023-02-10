@@ -15,10 +15,6 @@ const actions = {
     });
 
     commit("setFlits", data.flits);
-
-    
-
-    console.log(data.flits)
   },
 
   async createNewFlit({ commit }, flitInfo) {

@@ -3,6 +3,7 @@
   <router-link to="/menu">Menu</router-link>
   <router-link to="/login">Login</router-link>
   <router-link to="/signup">Signup</router-link>
+  <router-link to="/test">----TESTVIEW----</router-link>
 </template>
 
 <style>
@@ -32,20 +33,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-}
-
-nav {
-  border: dashed 1px red;
-  position: fixed;
-  top: 0;
-  padding: 30px;
-  width: 100%
-}
-
-nav a {
-  border: dashed 1px red;
-  font-weight: bold;
-  color: #1a3550;
 }
 
 nav a.router-link-exact-active {

@@ -12,9 +12,10 @@
         </div> 
         <br />
         <div id="lower">
-            <input class="button" type="submit" value="Login" @click="showCredentials">  
+            <input class="button" type="submit" value="Login" @click="login(credentials)">  
         </div>
       </form>
+      <GoBack />
     </div>
   </div>
  </template>
@@ -22,17 +23,18 @@
 <script>
 
   import { defineComponent, ref } from 'vue';
+  import useLogin from '@/composables/useLogin';
+  import GoBack from '@/components/GoBack.vue';
   
   export default defineComponent({
     name: 'loginView',
     components: {
-      
+      GoBack
     },
   
   setup() {
 
-    const email = ref(null)
-    const password = ref(null)
+    const {login} = useLogin()
 
     const credentials = ref({
       email: null,
@@ -40,9 +42,8 @@
     })
 
     return {
-      email,
-      password,
       credentials,
+      login
     }       
   }
 });

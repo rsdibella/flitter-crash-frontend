@@ -23,6 +23,7 @@
             <input class="button" type="submit" value="Signup" @click="signUp(userInfo)">  
         </div>
       </form>
+      <GoBack />
     </div>
   </div>
  </template>
@@ -31,11 +32,12 @@
 
   import { defineComponent, ref } from 'vue';
   import useUsers from '@/composables/useUsers';
+  import GoBack from "@/components/GoBack";
   
   export default defineComponent({
     name: 'signUpView',
     components: {
-      
+      GoBack
     },
   
   setup() {
@@ -86,7 +88,7 @@
   max-width: 300px;
   align-items: center;
   padding: 20px 40px;
-  border: 3px solid #2c3e50;
+  border: 3px solid black;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
